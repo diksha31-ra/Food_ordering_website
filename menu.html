@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Menu</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="js/main.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<!-- LEFT -->
+<h2 class="logo">FoodHomely</h2>
+
+<!-- CENTER -->
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+
+<!-- RIGHT -->
+<div class="cart-section">
+<a href="cart.html">Cart <span id="cart-count">0</span></a>
+</div>
+
+</nav>
+
+
+<section class="menu-page">
+
+<h1 class="menu-title">Select Food For Order</h1>
+
+<div class="search-box">
+<input type="text" id="searchBar" placeholder="Search favourite food">
+</div>
+
+<div class="filters">
+<button onclick="filterFood('all')">All</button>
+<button onclick="filterFood('dessert')">Desserts</button>
+<button onclick="filterFood('drinks')">Cold Drinks</button>
+<button onclick="filterFood('southindian')">South Indian</button>
+<button onclick="filterFood('thali')">Indian Thali</button>
+<button onclick="filterFood('italian')">Italian Food</button>
+<button onclick="filterFood('chinese')">Chinese Food</button>
+</div>
+
+<div class="food-grid" id="foodMenu"></div>
+
+</section>
+
+
+
+
+<!-- FOOD MODAL -->
+
+<div class="modal" id="foodModal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeModal()">&times;</span>
+
+<img id="modalImg">
+
+<h2 id="modalName"></h2>
+
+<p id="modalDesc"></p>
+
+<h3 id="modalPrice"></h3>
+
+<button onclick="addModalToCart()">Item Add</button>
+
+</div>
+
+</div>
+
+<div id="toast" class="toast">Item Added to Cart ✅</div>
+
+</body>
+</html>
